@@ -12,7 +12,6 @@ import Footer from '../components/Footer'
 const Home = () => {
     return (
         <div>
-            <Navbar />
             <Banner />
             <Categories />
             <PopularEvents />
@@ -20,7 +19,6 @@ const Home = () => {
             <TrendingEvents />
             <CreateEvent />
             <Subscription />
-            <Footer />
         </div>
     )
 }

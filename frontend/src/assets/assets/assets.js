@@ -24,7 +24,7 @@ export const offlineEvents = [
         title: "Lakeside Camping at Pawna",
         organizer: "Adventure Geek",
         time: "8:30 AM - 7:30 PM",
-        price: "INR 1,400",
+        price: "1,400",
         interested: "14",
         category: "Travel & Adventure",
         image: camping
@@ -34,7 +34,7 @@ export const offlineEvents = [
         title: "Sound Of Christmas 2023",
         organizer: "Bal Gandharva Rang Mandir, Mumbai",
         time: "6:30 PM - 9:30 PM",
-        price: "INR 499",
+        price: "499",
         interested: "16",
         category: "Cultural & Arts",
         image: christmas
@@ -64,7 +64,7 @@ export const offlineEvents = [
         title: "Cricket Business Meetup",
         organizer: "Play The Turf, Malad, Mumbai",
         time: "6:30 PM - 9:30 PM",
-        price: "INR 399",
+        price: "399",
         interested: null,
         category: "Sports & Fitness",
         image: cricket
@@ -74,7 +74,7 @@ export const offlineEvents = [
         title: "Valentine’s Day Sail on a Yacht in Mumbai",
         organizer: "Mumbai",
         time: "7 AM - 8 PM",
-        price: "INR 2,999",
+        price: "2,999",
         interested: "160",
         category: "Travel & Adventure",
         image: valentines
@@ -87,7 +87,7 @@ export const onlineEvents = [
         title: "The Road to Jobs and Internships: Starting with LinkedIn",
         organizer: "Online",
         time: "6 PM - 7:30 PM",
-        price: "INR 49",
+        price: "49",
         interested: "21",
         category: "Educational & Business",
         image: linkdin
@@ -97,7 +97,7 @@ export const onlineEvents = [
         title: "Online Zumba Dance Fitness Class over Zoom",
         organizer: "Online",
         time: "7 PM - 8 PM",
-        price: "CAD 7",
+        price: "700",
         interested: null,
         category: "Sports & Fitness",
         image: fitness
@@ -127,7 +127,7 @@ export const onlineEvents = [
         title: "HackerX - Zurich (Full-Stack) 11/29 (Virtual)",
         organizer: "Online",
         time: "11:30 AM - 1:30 PM",
-        price: "USD 0 - 50",
+        price: "5000",
         interested: "16",
         category: "Technology & Innovation",
         image: hackerX
@@ -137,7 +137,7 @@ export const onlineEvents = [
         title: "FRIENDS OF THE METAVERSE: Season of Innovation 2023",
         organizer: "Online",
         time: "10:30 AM - 5 PM",
-        price: "USD 0 - 150",
+        price: "1500",
         interested: "10",
         category: "Technology & Innovation",
         image: metaverse
@@ -150,7 +150,7 @@ export const trendingEvents = [
         title: "Voca Loca - Aditya Gadhvi in Vadodara",
         organizer: "Satyanarayan Lawns, Vadodara",
         time: "6 PM - 10:30 PM",
-        price: "INR 450 - 30k",
+        price: "450 - 30k",
         interested: "528",
         category: "Entertainment",
         image: entertainment
@@ -160,7 +160,7 @@ export const trendingEvents = [
         title: "Camp United Nations for Girls Los Angeles 2023",
         organizer: "Renaissance Los Angeles Airport Hotel",
         time: "8 AM - 12 PM",
-        price: "USD 125",
+        price: "1250",
         interested: null,
         category: "Educational & Business",
         image: UN
@@ -170,7 +170,7 @@ export const trendingEvents = [
         title: "Bollywood Gen Z Party",
         organizer: "Brown Alley, Melbourne",
         time: "9:30 PM - 3:30 AM",
-        price: "AUD 0 - 40",
+        price: "4000",
         interested: "137",
         category: "Entertainment",
         image: GenZ
@@ -180,7 +180,7 @@ export const trendingEvents = [
         title: "GTApreneurs Nov 28 Business Networking Event w/ Food Business",
         organizer: "Earl Bales Community Centre, Toronto",
         time: "5 PM - 8 PM",
-        price: "CAD 22",
+        price: "2200",
         interested: "13",
         category: "Educational & Business",
         image: businessNetwork
@@ -190,7 +190,7 @@ export const trendingEvents = [
         title: "A Day of well-being and creativity",
         organizer: "Atelier du monde for Kids, Brussels",
         time: "10 AM - 8:30 PM",
-        price: "EUR 20 - 45",
+        price: "4500",
         interested: null,
         category: "Cultural & Arts",
         image: creativity
@@ -200,7 +200,7 @@ export const trendingEvents = [
         title: "Dystopia's Winter Wonderland",
         organizer: "Hyde Sunset Kitchen + Cocktails, CA",
         time: "8:30 PM - 11:50 PM",
-        price: "USD 23.5 - 35",
+        price: "3500",
         interested: "10",
         category: "Entertainment",
         image: winter
