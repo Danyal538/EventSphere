@@ -6,9 +6,12 @@ import { trendingEvents } from '../assets/assets/assets'
 import star from "../assets/assets/Star 1.png"
 import star2 from "../assets/assets/Interested Button.png"
 import ticket from "../assets/assets/ion_ticket.png"
+import EventDescription from './EventDescription'
+import { useNavigate } from 'react-router-dom'
 
 
 const Events = () => {
+    const navigate = useNavigate();
     return (
         <>
             <div className='bg-[#2B293D80] w-full h-[180px] flex items-center flex-col'>
@@ -25,7 +28,7 @@ const Events = () => {
             <div className='mt-20'>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mx-10">
                     {offlineEvents.map((event, index) => (
-                        <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md border border-[#FFFFFF] hover:shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
+                        <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md border border-[#FFFFFF] hover:shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer" onClick={() => navigate("/event-description", { state: { event } })}>
 
                             {/* Top Image Section */}
                             <div className="relative">
@@ -66,7 +69,8 @@ const Events = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-10">
                     {onlineEvents.map((event, index) => (
-                        <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md border border-[#FFFFFF] hover:shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
+                        <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md border border-[#FFFFFF] hover:shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
+                            onClick={() => navigate("/event-description", { state: { event } })}>
 
                             {/* Top Image Section */}
                             <div className="relative">
@@ -107,7 +111,8 @@ const Events = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mx-10 mb-30">
                     {trendingEvents.map((event, index) => (
-                        <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md border border-[#FFFFFF] hover:shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
+                        <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md border border-[#FFFFFF] hover:shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
+                            onClick={() => navigate("/event-description", { state: { event } })}>
 
                             {/* Top Image Section */}
                             <div className="relative">

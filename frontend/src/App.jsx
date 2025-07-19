@@ -8,16 +8,35 @@ import Home from './pages/Home'
 import Events from './pages/Events'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import SignUp from './pages/SignUp'
+import { useLocation } from 'react-router-dom'
+import Login from './pages/Login'
+import EventDescription from './pages/EventDescription'
+import ScrollToTop from './components/ScrollToTop'
+import TicketBooking from './pages/TicketBooking'
+import TicketDetail from './pages/TicketDetail'
+import TicketSummary from './pages/TicketSummary'
 
 function App() {
+  const location = useLocation();
+  const hideLayoutPaths = ['/signup', '/login', '/booking', '/details', '/summary'];
+  const shouldHideLayout = hideLayoutPaths.includes(location.pathname);
+
   return (
     <>
-      <Navbar />
+      {!shouldHideLayout && <Navbar />}
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/events' element={<Events />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/event-description' element={<EventDescription />} />
+        <Route path="/booking" element={<TicketBooking />} />
+        <Route path='/details' element={<TicketDetail />} />
+        <Route path='/summary' element={<TicketSummary />} />
       </Routes>
-      <Footer />
+      {!shouldHideLayout && <Footer />}
     </>
   )
 }
