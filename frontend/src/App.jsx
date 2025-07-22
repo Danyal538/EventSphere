@@ -16,6 +16,7 @@ import ScrollToTop from './components/ScrollToTop'
 import TicketBooking from './pages/TicketBooking'
 import TicketDetail from './pages/TicketDetail'
 import TicketSummary from './pages/TicketSummary'
+import Account from './pages/Account'
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
         <Route path="/booking" element={<TicketBooking />} />
         <Route path='/details' element={<TicketDetail />} />
         <Route path='/summary' element={<TicketSummary />} />
+        <Route path='/profile' element={<Account />} />
       </Routes>
       {!shouldHideLayout && <Footer />}
     </>

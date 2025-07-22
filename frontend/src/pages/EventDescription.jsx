@@ -56,9 +56,9 @@ const EventDescription = () => {
                 {/* Right: Ticket Section */}
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200 space-y-6 w-full max-w-md">
                     {/* Buy Tickets Button */}
-                    <div className="flex items-center bg-[#FFE047] hover:bg-yellow-500 rounded-md px-4 py-3 w-fit hover:shadow-md transition duration-200">
+                    <div className="flex items-center bg-[#FFE047] hover:bg-yellow-500 rounded-md px-4 py-3 w-fit hover:shadow-md transition duration-200" onClick={() => navigate("/booking", { state: { event } })}>
                         <img src={ticket} alt="Ticket" className="w-5 h-5 mr-2" />
-                        <button className="text-sm font-semibold text-black" onClick={() => navigate("/booking", { state: { event } })}>Buy Tickets</button>
+                        <button className="text-sm font-semibold text-black">Buy Tickets</button>
                     </div>
 
                     {/* Ticket Information */}
@@ -66,7 +66,7 @@ const EventDescription = () => {
                         <p className="text-lg font-semibold text-[#2D2C3C] mb-2">Ticket Information</p>
                         <div className="flex items-center gap-2">
                             <img src={ticket} alt="Ticket Icon" className="w-5 h-5" />
-                            <p className="text-sm text-gray-700">Standard – INR 200 each</p>
+                            <p className="text-sm text-gray-700">Standard – INR {event.price} each</p>
                         </div>
                     </div>
                 </div>

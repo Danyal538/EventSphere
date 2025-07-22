@@ -4,19 +4,25 @@ import cross from "../assets/assets/Close button.png"
 import { useLocation, useNavigate } from 'react-router-dom'
 import date from "../assets/assets/uiw_date.png"
 
-const TicketDetail = ({ count }) => {
+const TicketDetail = () => {
   const { state } = useLocation();
-  const { event } = state;
+  const { event, quantity, total } = state;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const navigate = useNavigate();
 
+  // if (!fullName || !email || !phone) {
+  //   return (
+  //     alert("All fields are required")
+  //   )
+  // }
+
   return (
     <div className="w-full max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-20">
       {/* Top Bar */}
       <div className="flex items-center justify-between px-4 py-3">
-        <img src={sideArrow} alt="Back" className="w-4 h-4" onClick={() => navigate("/booking")} />
+        <img src={sideArrow} alt="Back" className="w-4 h-4" onClick={() => navigate("/booking", { state: { event } })} />
         <p className="font-semibold text-lg">Attendee Details</p>
         <img src={cross} alt="Close" className="w-4 h-4" />
       </div>
@@ -77,10 +83,10 @@ const TicketDetail = ({ count }) => {
       {/* Summary and Button */}
       <div className="px-4 pt-3 pb-4 border border-[#828282B2]">
         <div className="flex justify-between text-sm text-gray-800 mb-3 border border-[#828282B2] px-3 py-2 rounded-md">
-          <p>Qty: <span className="text-green-600 font-semibold">{count}</span></p>
-          <p>Total: <span className="text-green-600 font-semibold">₹{count * event.price}</span></p>
+          <p>Qty: <span className="text-green-600 font-semibold">{quantity}</span></p>
+          <p>Total: <span className="text-green-600 font-semibold">{total}</span></p>
         </div>
-        <button className="w-full bg-[#2B293D] text-white text-sm py-3 rounded-md hover:bg-black transition duration-200" onClick={() => navigate("/summary")}>
+        <button className="w-full bg-[#2B293D] text-white text-sm py-3 rounded-md hover:bg-black transition duration-200" onClick={() => navigate("/summary", { state: { event, fullName, email, total } })}>
           Continue to Checkout
         </button>
       </div>

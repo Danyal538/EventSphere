@@ -24,7 +24,7 @@ export const offlineEvents = [
         title: "Lakeside Camping at Pawna",
         organizer: "Adventure Geek",
         time: "8:30 AM - 7:30 PM",
-        price: "1,400",
+        price: "1400",
         interested: "14",
         category: "Travel & Adventure",
         image: camping
@@ -74,7 +74,7 @@ export const offlineEvents = [
         title: "Valentine’s Day Sail on a Yacht in Mumbai",
         organizer: "Mumbai",
         time: "7 AM - 8 PM",
-        price: "2,999",
+        price: "2999",
         interested: "160",
         category: "Travel & Adventure",
         image: valentines
@@ -150,7 +150,7 @@ export const trendingEvents = [
         title: "Voca Loca - Aditya Gadhvi in Vadodara",
         organizer: "Satyanarayan Lawns, Vadodara",
         time: "6 PM - 10:30 PM",
-        price: "450 - 30k",
+        price: "1000",
         interested: "528",
         category: "Entertainment",
         image: entertainment
