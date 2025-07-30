@@ -17,6 +17,7 @@ import TicketBooking from './pages/TicketBooking'
 import TicketDetail from './pages/TicketDetail'
 import TicketSummary from './pages/TicketSummary'
 import Account from './pages/Account'
+import RegisteredUserNavbar from './components/RegisteredUserNavbar'
 
 function App() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <>
-      {!shouldHideLayout && <Navbar />}
+      {!shouldHideLayout && <RegisteredUserNavbar />}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />

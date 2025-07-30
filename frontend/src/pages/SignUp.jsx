@@ -85,6 +85,7 @@ const SignUp = () => {
                         <button
                             type="submit"
                             className="w-full bg-[#2B293D] text-white py-2 rounded-md hover:bg-[#1e1c2d] transition duration-200"
+                            onClick={() => navigate("/profile")}
                         >
                             Create Account
                         </button>
