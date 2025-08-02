@@ -18,6 +18,7 @@ import TicketDetail from './pages/TicketDetail'
 import TicketSummary from './pages/TicketSummary'
 import Account from './pages/Account'
 import RegisteredUserNavbar from './components/RegisteredUserNavbar'
+import CreateEventEdit from './pages/CreateEventEdit'
 
 function App() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function App() {
         <Route path='/details' element={<TicketDetail />} />
         <Route path='/summary' element={<TicketSummary />} />
         <Route path='/profile' element={<Account />} />
+        <Route path='/createPageEdit' element={<CreateEventEdit />} />
       </Routes>
       {!shouldHideLayout && <Footer />}
     </>

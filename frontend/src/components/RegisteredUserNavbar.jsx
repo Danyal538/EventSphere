@@ -41,7 +41,7 @@ const RegisteredUserNavbar = () => {
 
             {/* Right Side - Actions */}
             <div className="flex items-center gap-8">
-                <NavLink to="/create" className="text-white text-sm font-medium hover:text-[#FFE047] transition">
+                <NavLink to="/createPageEdit" className="text-white text-sm font-medium hover:text-[#FFE047] transition">
                     Create Event
                 </NavLink>
 

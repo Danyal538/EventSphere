@@ -18,8 +18,8 @@ const Navbar = () => {
 
             {/* Action Links */}
             <div className="flex gap-4 items-center">
-                <NavLink to="/create" className="text-white text-[18px] hover:text-[#FFE047] transition">Create Event</NavLink>
-                <NavLink to="/login" className="text-white text-[18px] hover:text-[#FFE047] transition" onClick={() => navigate("/login")}>Login</NavLink>
+                <NavLink to="/createPageEdit" className="text-white text-[18px] hover:text-[#FFE047] transition" >Create Event</NavLink>
+                <NavLink to="/login" className="text-white text-[18px] hover:text-[#FFE047] transition" >Login</NavLink>
                 <NavLink to="/signup">
                     <button className="bg-[#FFE047] text-[#2B293D] px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" onClick={() => navigate("/signup")}>
                         Sign Up
