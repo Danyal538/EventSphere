@@ -22,7 +22,7 @@ const CreateEvent = () => {
                 <div className="flex items-center gap-3 w-[200px] h-[50px] bg-[#FFE047] px-4 rounded-full shadow-md hover:bg-yellow-500">
                     <img src={add} alt="" className="w-5 h-5" />
                     <button className="text-[#2B293D] font-semibold text-[18px] leading-[100%] tracking-[0] text-center"
-                        onClick={() => navigate("/createPageEdit")}>
+                        onClick={() => navigate("/createEventEdit")}>
                         Create Event
                     </button>
                 </div>

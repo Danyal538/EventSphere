@@ -19,6 +19,8 @@ import TicketSummary from './pages/TicketSummary'
 import Account from './pages/Account'
 import RegisteredUserNavbar from './components/RegisteredUserNavbar'
 import CreateEventEdit from './pages/CreateEventEdit'
+import CreateEventBanner from './pages/CreateEventBanner'
+import CreateEventTicketing from './pages/CreateEventTicketing'
 
 function App() {
   const location = useLocation();
@@ -39,7 +41,9 @@ function App() {
         <Route path='/details' element={<TicketDetail />} />
         <Route path='/summary' element={<TicketSummary />} />
         <Route path='/profile' element={<Account />} />
-        <Route path='/createPageEdit' element={<CreateEventEdit />} />
+        <Route path='/createEventEdit' element={<CreateEventEdit />} />
+        <Route path='/createEventBanner' element={<CreateEventBanner />} />
+        <Route path='/createEventTicketing' element={<CreateEventTicketing />} />
       </Routes>
       {!shouldHideLayout && <Footer />}
     </>
