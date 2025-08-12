@@ -21,6 +21,7 @@ import RegisteredUserNavbar from './components/RegisteredUserNavbar'
 import CreateEventEdit from './pages/CreateEventEdit'
 import CreateEventBanner from './pages/CreateEventBanner'
 import CreateEventTicketing from './pages/CreateEventTicketing'
+import CreateEventReview from './pages/CreateEventReview'
 
 function App() {
   const location = useLocation();
@@ -44,6 +45,8 @@ function App() {
         <Route path='/createEventEdit' element={<CreateEventEdit />} />
         <Route path='/createEventBanner' element={<CreateEventBanner />} />
         <Route path='/createEventTicketing' element={<CreateEventTicketing />} />
+        <Route path='/createEventReview' element={<CreateEventReview />} />
+
       </Routes>
       {!shouldHideLayout && <Footer />}
     </>

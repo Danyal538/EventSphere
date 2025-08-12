@@ -1,22 +1,36 @@
-import React, { useState } from 'react'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const StepTracker = () => {
-    const steps = ["Edit", "Banner", "Ticketing", "Review"];
-    const [currentStep, setCurrentStep] = useState("Ticketing");
+
+
+
+export default function HorizontalLinearAlternativeLabelStepper() {
+    const location = useLocation();
+    const steps = [
+        'Edit',
+        'Banner',
+        'Ticketing',
+        'Review',
+    ];
+
+    const stepMap = {
+        "/createEventEdit": 0, "/createEventBanner": 1, "/createEventTicketing": 2, "/createEventReview": 3
+    }
+    const activeStep = stepMap[location.pathname] ?? 0;
     return (
-        <div>
-            {steps.map((step, index) => (
-                <button
-                    key={index}
-                    onClick={() => setCurrentStep(index)}
-                    className={`px-6 py-2 rounded-full text-sm transition font-medium ${currentStep === index
-                        ? "bg-blue-600 text-white shadow-md"
-                        : "border border-gray-300 text-gray-600 hover:bg-gray-100"}`}>
-                    {step}
-                </button>
-            ))}
-        </div>
-    )
+        <Box sx={{ width: '100%' }}>
+            <Stepper activeStep={activeStep} alternativeLabel>
+                {steps.map((label) => (
+                    <Step key={label}>
+                        <StepLabel>{label}</StepLabel>
+                    </Step>
+                ))}
+            </Stepper>
+        </Box>
+    );
 }
-
-export default StepTracker
