@@ -7,7 +7,7 @@ import AppContext from '../contexts/AppContext';
 
 const CreateEventBanner = () => {
     const navigate = useNavigate();
-    const { setImage, title, location, starTime, endTime } = useContext(AppContext);
+    const { setImage, title, location, startTime, endTime } = useContext(AppContext);
     return (
         <div className="px-8 md:px-20">
 
@@ -22,7 +22,7 @@ const CreateEventBanner = () => {
                 <div className="flex flex-col">
                     <h1 className="text-4xl font-bold text-[#2D2C3C]">{title}</h1>
                     <p className="text-lg text-[#2D2C3C]">{location}</p>
-                    <p className="text-base text-[#2D2C3C]">{starTime} - {endTime}</p>
+                    <p className="text-base text-[#2D2C3C]">{startTime} - {endTime}</p>
                 </div>
             </div>
 
@@ -41,7 +41,13 @@ const CreateEventBanner = () => {
                         className="w-full h-full cursor-pointer text-gray-700 file:mr-4 file:py-2 file:px-4 
                                    file:border file:border-[#ccc] file:text-sm file:rounded file:text-black 
                                    file:bg-[#EEEEEE] hover:file:bg-yellow-400"
-                        onChange={(e) => setImage(e.target.files)}
+                        onChange={(e) => {
+                            const file = e.target.files[0];
+                            if (file) {
+                                const previewUrl = URL.createObjectURL(file);
+                                setImage(previewUrl)
+                            }
+                        }}
                     />
                 </div>
 

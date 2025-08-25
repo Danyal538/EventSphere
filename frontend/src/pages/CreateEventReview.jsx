@@ -13,7 +13,7 @@ import map from "../assets/assets/Map.png";
 
 const CreateEventReview = () => {
     const navigate = useNavigate();
-    const { description, image, title, Date, starTime, endTime, ticketPrice, ticketType, location } = useContext(AppContext);
+    const { description, image, title, Date, startTime, endTime, ticketPrice, ticketType, location } = useContext(AppContext);
     return (
         <div className='px-6 lg:px-20'>
             <div className="flex gap-6 items-center mt-10 mb-8">
@@ -26,7 +26,7 @@ const CreateEventReview = () => {
                 <div className="flex flex-col">
                     <h1 className="text-4xl font-bold text-[#2D2C3C]">{title}</h1>
                     <p className="text-lg text-[#2D2C3C]">{location}</p>
-                    <p className="text-base text-[#2D2C3C]">{starTime} - {endTime}</p>
+                    <p className="text-base text-[#2D2C3C]">{startTime} - {endTime}</p>
                 </div>
             </div>
             <div className="mt-8 mb-12"> <StepTracker /> </div>
@@ -49,7 +49,7 @@ const CreateEventReview = () => {
                         </div>
                         <div className='flex gap-2'>
                             <img src={clock} alt="" className='w-[20px] h-[20px]' />
-                            <p>{starTime - endTime}</p>
+                            <p>{startTime - endTime}</p>
                         </div>
                     </div>
                     <div className='mr-10'>
@@ -74,8 +74,8 @@ const CreateEventReview = () => {
                     <p className='text-[#2D2C3C] font-bold text-[30px]'>Hosted by: </p>
                 </div>
                 <div className='ml-5'>
-                    <p className='font-semibold text-[30px] text-[#2D2C3C]'>Event description</p>
-                    <p className='mt-5 ml-5 text-[#5A5A5A] text-[18px]'>{description}</p>
+                    <p className='font-semibold text-[30px] text-[#2D2C3C] mt-10'>Event description</p>
+                    <p className='mt-5 ml-5 text-[#5A5A5A] text-[18px] mr-5 mb-20'>{description}</p>
                 </div>
             </div>
             <div className='flex gap-10 justify-end px-8 py-10'>

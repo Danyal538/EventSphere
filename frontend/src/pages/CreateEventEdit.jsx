@@ -20,6 +20,10 @@ const CreateEventEdit = () => {
         "Comedy & Entertainment", "Education & Learning", "Travel & Adventure"
     ];
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    // }
+
     return (
         <div className="px-10 lg:px-20 py-8 font-sans max-w-6xl mx-auto">
 
